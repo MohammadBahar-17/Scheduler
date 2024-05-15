@@ -37,11 +37,12 @@ class Process {
 public class Scheduler {
 
     public static void main(String[] args) {
+        
         String filename = "file.txt";
         ArrayList<Process> processes = new ArrayList<>();
         readFile(filename, processes);
 
-        int contextSwitch = 2;
+        int contextSwitch = 0;
         int quantum = 3;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please choose an option:\n0. First-Come, First-Served\n1. Shortest Remaining Time\n2. Round Robin\n3. Exit");
