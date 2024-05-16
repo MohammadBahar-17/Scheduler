@@ -104,7 +104,6 @@ public class Scheduler {
 
     static void SRT(ArrayList<Process> processes, int contextSwitch) {
         PriorityQueue<Process> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.burstTime));
-
         int currentTime = 0, idx = 0;
         while (!pq.isEmpty() || idx < processes.size()) {
             while (idx < processes.size() && processes.get(idx).arrivalTime <= currentTime) {
